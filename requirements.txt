@@ -1,5 +1,5 @@
 ﻿asgiref==3.4.1
-Django==4.2.16
+Django==3.2.25
 Faker==30.8.2
 python-dateutil==2.9.0.post0
 six==1.16.0
