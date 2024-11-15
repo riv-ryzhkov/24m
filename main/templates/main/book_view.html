@@ -1,0 +1,25 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Book
+{% endblock %}
+
+
+{% block content %}
+
+<h3>Обрана Вами книга</h3>
+    {% if book %}
+            <div class="alert alert-success mt-1">
+                <p>{{ book.id }})</p>
+                <h4><u>{{ book.title }}</u></h4>
+                <p><b><i>{{ book.author }}</i></b></p>
+                <p><i>{{ book.text }}</i></p>
+                <p><b>Видано:   {{ book.published }}</b></p>
+                <p>Кількість книжок: {{ book.count }}</p>
+                <p><b>Зареєстровано:  {{ book.created }}</b></p>
+            </div>
+    {% else %}
+        <p>Наразі в нашому каталозі така книжка відсутня...</p>
+    {% endif %}
+
+{% endblock %}
