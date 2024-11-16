@@ -6,6 +6,7 @@ from django.template.defaultfilters import title
 
 from main.models import Book
 from faker import Faker
+import faker
 
 
 class Command(BaseCommand):
@@ -17,7 +18,7 @@ class Command(BaseCommand):
     def handle(self, *args, **kwargs):
         total = kwargs['total']
         for i in range(total):
-            b = Faker()
+            b = faker.Faker()
             try:
                 Book.objects.create(
                     title = b.company(),
